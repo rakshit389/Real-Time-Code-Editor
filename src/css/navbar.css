@@ -1,0 +1,22 @@
+#navbars
+{
+    background: #1c1e29 ;
+    display: flex;
+    width: 100%;
+    height: 8vh;
+}
+.focused {
+    border: 1px solid white ;
+    border-radius: 5px;
+}
+#inner-navbar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.runstop-button
+{
+   margin-left: 1rem;
+ 
+}
