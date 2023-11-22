@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 const Client = ( props  ) => {
 
     const removeUser = (socket_id,roomId) => {
-         console.log("rooming" , props.roomId)
+    
          props.socketRef.emit(ACTIONS.REMOVE , { socket_id , roomId })
     }
     return (
