@@ -55,7 +55,6 @@ const EditorPage = () => {
       
     if( !language   && langRef.current )
     {
-       console.log(codeRef.current)
        langRef.current.classList.add('focused');
     }
 
@@ -141,7 +140,7 @@ const EditorPage = () => {
                           Join.play();
                       },1000)
                       toast.success(`${username} joined the room.`);
-                      console.log(`${username} joined`);
+                    
                   }
 
                   setAdminname(adminName);
@@ -169,7 +168,7 @@ const EditorPage = () => {
           })
 
           socketRef.current.on(ACTIONS.UPDATE_ADMIN , ()=> {
-             console.log("admin left")
+            
              setAdminname(null);
              toast.success('Admin Left');
           })
@@ -192,7 +191,7 @@ const EditorPage = () => {
           socketRef.current.on(
               ACTIONS.DISCONNECTED,
               ({ socketId, username }) => {
-                  console.log("called")
+                
                   let Left = new Audio('/Left.mp3');
                   toast.success(`${username} left the room.`);
                   Left.play();
