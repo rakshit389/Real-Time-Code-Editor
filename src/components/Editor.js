@@ -56,17 +56,11 @@ const Editor = ({ socketRef, roomId, onCodeChange, username , codeRef , language
             code,
           }  );
           
-           
            editorRef.current.on('keyup',()=>{
             
             socketRef.current.emit("typing", {
               username,
-            } , {
-              passive: true
             });
-
-            
-
            })     
         }
       });
