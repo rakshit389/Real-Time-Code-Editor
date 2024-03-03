@@ -65,13 +65,7 @@ const Editor = ({ socketRef, roomId, onCodeChange, username , codeRef , language
               passive: true
             });
 
-            setTimeout(()=>{
-                socketRef.current.emit("typing",{
-                    
-                     username:"",
-                });
-
-            },500)
+            
 
            })     
         }
