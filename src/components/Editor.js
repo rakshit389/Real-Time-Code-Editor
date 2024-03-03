@@ -37,7 +37,7 @@ const Editor = ({ socketRef, roomId, onCodeChange, username , codeRef , language
       editorRef.current = Codemirror.fromTextArea(
         document.getElementById("realtimeEditor"),
         { 
-          mode: { name : language_mode , json: true },
+          mode: { name : language_mode  },
           theme: "dracula",
           autoCloseTags: true,
           autoCloseBrackets: true,
