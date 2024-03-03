@@ -54,7 +54,7 @@ const Editor = ({ socketRef, roomId, onCodeChange, username , codeRef , language
           socketRef.current.emit(ACTIONS.CODE_CHANGE, {
             roomId,
             code,
-          } , { passive: true } );
+          }  );
           
            
            editorRef.current.on('keyup',()=>{
