@@ -19,7 +19,7 @@ phases:
   post_build:
     commands:
       - echo Build complete.
-      - echo Packaging and uploading artifacts (if applicable)...
+      - echo Packaging and uploading artifacts...
 
 artifacts:
   files:
