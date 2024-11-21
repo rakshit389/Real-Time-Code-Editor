@@ -19,13 +19,15 @@ phases:
   post_build:
     commands:
       - echo Build complete.
-      - echo Packaging and uploading artifacts...
+      - echo Build complete.
+      - echo Uploading build artifacts to S3...
+      - aws s3 cp dist/ s3://demo-app-artifact/ --recursive
 
 artifacts:
   files:
     - '**/*' 
   discard-paths: no
-  base-directory: build # Specify the output directory (e.g., `build` or `dist`)
+  base-directory: dist # Specify the output directory (e.g., `build` or `dist`)
 
 cache:
   paths:
